@@ -1,0 +1,180 @@
+﻿/* Style global pour la page */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: url('images/fond2.jpg') no-repeat center center fixed; /* Image de fond */
+    background-size: cover;
+}
+
+/* Style de l'en-tête (menu) */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Conteneur pour le logo et le bouton retour */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+/* Positionne le bouton de retour */
+.back-button {
+    width: 40px; /* Augmente la taille initiale du bouton */
+    height: auto;
+    margin-right: 20px; /* Espacement avec le logo */
+    transition: transform 0.3s ease; /* Ajoute une transition pour l'animation */
+}
+
+/* Lorsque l'on passe sur le bouton, il grossit */
+.back-button:hover {
+    transform: scale(1.2); /* Agrandit le bouton au survol */
+}
+
+/* Logo */
+header .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+/* Menu de navigation */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background-color: #5D3FD3;
+    border-radius: 5px;
+}
+
+/* Styles pour la table des matières */
+#table-des-matieres {
+    margin: 100px 20px 20px 20px; /* Augmente l'espace entre le menu et la table des matières */
+    padding: 15px;
+    background-color: #ffffff; /* Fond blanc pour la table des matières */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+#table-des-matieres ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#table-des-matieres li {
+    margin: 5px 0;
+}
+
+#table-des-matieres a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+#table-des-matieres a:hover {
+    color: #003366;
+}
+
+/* Styles pour les sections */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+section h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+/* Style pour les images flottantes */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+img[style*="float:left"] {
+    float: left;
+    margin-right: 20px;
+}
+
+img[style*="float:right"] {
+    float: right;
+    margin-left: 20px;
+}
+
+/* Style pour les liens dans la section Liens utiles */
+#liens-utiles ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#liens-utiles li {
+    margin: 5px 0;
+}
+
+#liens-utiles a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+#liens-utiles a:hover {
+    color: #003366;
+}
+
+/* Responsive design : Adapter le menu pour les petits écrans */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        padding: 8px 10px;
+    }
+
+    section {
+        margin: 20px;
+    }
+
+    img {
+        max-width: 90%;
+        margin: 5px auto;
+        display: block;
+    }
+}
